@@ -1,0 +1,28 @@
+body {
+	overflow: hidden;
+}
+
+.floor {
+	width: 100%;
+	height: 100vh;	
+}
+
+.floor.--ground {
+	background-color: #BB91CC;
+}
+
+.floor.--first {
+	background-color: #FFA6A4;
+}
+
+.floor.--second {
+	background-color: #B5A6FF;
+}
+
+.floor.--third {
+	background-color: #68B280;
+}
+
+.floor.--fourth {
+	background-color: #57FF8C;
+}

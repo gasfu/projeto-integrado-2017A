@@ -95,13 +95,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body {
-  overflow: hidden;
-}
-
+.control-wrapper,
 .floor {
   width: 100%;
   height: 100vh;
+}
+
+@font-face {
+  font-family: Digital;
+  src: url("../../../assets/fonts/digital.ttf");
+}
+
+body {
+  overflow: hidden;
 }
 
 .floor.--ground {
@@ -122,4 +128,103 @@ body {
 
 .floor.--fourth {
   background-color: #57FF8C;
+}
+
+.control-wrapper {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.6);
+}
+
+.control-wrapper.--hide {
+  display: none;
+}
+
+.control {
+  position: fixed;
+  right: 45px;
+  bottom: 0;
+  z-index: 2;
+  padding: 15px;
+  width: 300px;
+  height: 360px;
+  background-color: #F1F1F1;
+  border-radius: 5px 5px 0 0;
+  animation: slideDown .6s;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 15px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 2px 15px 2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 15px 2px rgba(0,0,0,.2);
+}
+
+.control>.led {
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  border-radius: 5px;
+  color: red;
+  font-size: 72px;
+  line-height: 1em;
+  font-family: Digital;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(360px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.button-group-control {
+  display: inline-block;
+  width: calc(50% - 2px);
+  margin-top: 15px;
+}
+
+.button-group-control>.button,
+.button-group-control>.label {
+  width: 50%;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.button-group-control>.label {
+  float: left;
+  background-color: #ccc;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  margin-right: -2px;
+  border-radius: 40px 0 0 40px;
+  color: #929292;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Arial;
+}
+
+.button-group-control>.button {
+  background-color: #b2b2b2;
+  margin-left: -2px;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+}
+
+.button-group-control>.button:active,
+.button-group-control>.button:focus,
+.button-group-control>.button:hover {
+  background-color: #a9a9a9;
+  outline: 0;
+}
+
+.button-group-control>.label>.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }

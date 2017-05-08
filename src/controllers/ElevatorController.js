@@ -19,7 +19,7 @@ export default class ElevatorController {
 			this.openDoor(nextDoor, false);
 		};
 
-		this._closeDoor(() => {
+		this.closeDoor(() => {
 			smoothScroll(floor, time, openNextDoor);
 		});
 
@@ -30,23 +30,22 @@ export default class ElevatorController {
 		const door = target.previousElementSibling;		
 		door.classList.remove("--close");
 		door.classList.add("--open");
-		control ? this.showControl() : null;
+		control ? this.showControl(door) : null;
 	}
 
-	showControl() {
-		setTimeout(() => {
+	showControl(door) {
+		const remove = () => {
 			this.control.classList.remove("--hide")
-		}, 2000);	
+		};
+
+		setTimeout(remove , 2000);	
 	}
 
-	_closeDoor(callback) {
+	closeDoor(callback = null) {
 		const door = document.querySelector(".door.--open");
 		door.classList.remove("--open");
 		door.classList.add("--close");
-		console.log("teste");
-		setTimeout(() => {
-			callback();
-		}, 1000);	
+		callback ? setTimeout(callback, 1000) : null;	
 	}
 
 	_setGround() {

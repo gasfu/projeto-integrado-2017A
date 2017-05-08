@@ -91,7 +91,7 @@ body {
 
 .button-group-control {
 	display: inline-block;
-	width: calc(50% - 2px);
+	width: calc(50% - 4px);
 	margin-top: 15px;
 }
 

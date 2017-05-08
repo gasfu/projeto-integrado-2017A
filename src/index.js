@@ -1,13 +1,22 @@
 import smoothScroll from "smoothScroll";
-import ElevadorController from "./controllers/ElevadorController";
+import ElevatorController from "./controllers/ElevatorController";
 
 window.localStorage.setItem("floor", 4);
-const floors = ["ground", "first", "second", "third", "fourth"];
+const floors = ["ground", "first", "second", "third", "fourth", "fifth"];
+
+const elevatorController = new ElevatorController();
 
 //Add action in control
 const controlButtons = document.querySelectorAll("[control-action-move]");
 controlButtons.forEach(button => { 
-	button.addEventListener("click", (button) => { 
-		ElevadorController.move(floors[button.target.value], button.target.value); 
+	button.addEventListener("click", () => { 
+		elevatorController.move(floors[button.value], button.value); 
+	});
+});
+
+const openDoorButtons = document.querySelectorAll("[open-action]");
+openDoorButtons.forEach(button => {
+	button.addEventListener("click", () => {
+		elevatorController.openDoor(button, true);
 	});
 });

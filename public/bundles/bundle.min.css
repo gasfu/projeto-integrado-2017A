@@ -101,6 +101,12 @@ table {
   height: 100vh;
 }
 
+.control>.led,
+.door-wrapper>.led {
+  text-align: center;
+  line-height: 1em;
+}
+
 @font-face {
   font-family: Digital;
   src: url("../../../assets/fonts/digital.ttf");
@@ -108,6 +114,10 @@ table {
 
 body {
   overflow: hidden;
+}
+
+.floor {
+  position: relative;
 }
 
 .floor.--ground {
@@ -130,9 +140,13 @@ body {
   background-color: #57FF8C;
 }
 
+.floor.--fifth {
+  background-color: #FF7257;
+}
+
 .control-wrapper {
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0,.6);
@@ -146,7 +160,7 @@ body {
   position: fixed;
   right: 45px;
   bottom: 0;
-  z-index: 2;
+  z-index: 10;
   padding: 15px;
   width: 300px;
   height: 360px;
@@ -161,12 +175,10 @@ body {
 
 .control>.led {
   width: 100%;
-  text-align: center;
   background-color: #000;
   border-radius: 5px;
   color: red;
   font-size: 72px;
-  line-height: 1em;
   font-family: Digital;
 }
 
@@ -227,4 +239,169 @@ body {
   display: inline-block;
   width: 1em;
   height: 1em;
+}
+
+.door-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 45px;
+  width: 300px;
+}
+
+.door-wrapper>.led {
+  width: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  background-color: #000;
+  border-radius: 2px;
+  color: red;
+  font-size: 38px;
+  font-family: Digital;
+  -webkit-box-shadow: 0 2px 15px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 2px 15px 2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 15px 2px rgba(0,0,0,.2);
+}
+
+.door-wrapper>.door {
+  height: 400px;
+  width: 100%;
+  background-color: #000;
+  border: 1px solid #8F8F8F;
+}
+
+.door-wrapper>.door>.left,
+.door-wrapper>.door>.right {
+  height: 100%;
+  display: inline-block;
+  background-color: #999;
+}
+
+.door-wrapper>.door>.right {
+  width: calc(50% - 5px);
+  float: right;
+  -webkit-box-shadow: 0 -1px 10px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 -1px 10px 2px rgba(0,0,0,.2);
+  box-shadow: 0 -1px 10px 2px rgba(0,0,0,.2);
+}
+
+.door-wrapper>.door>.left {
+  width: calc(50% + 5px);
+  position: relative;
+  margin-right: -4px;
+  z-index: 2;
+  -webkit-box-shadow: 3px -1px 10px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 3px -1px 10px 2px rgba(0,0,0,.2);
+  box-shadow: 3px -1px 10px 2px rgba(0,0,0,.2);
+}
+
+.door-wrapper>.door.--open>.left,
+.door-wrapper>.door.--open>.right {
+  width: 20px;
+}
+
+.door-wrapper>.door.--open>.left {
+  animation: openLeft 2s;
+}
+
+.door-wrapper>.door.--open>.right {
+  animation: openRight 2s;
+}
+
+@keyframes openRight {
+  from {
+    width: calc(50% - 5px);
+  }
+
+  to {
+    width: 20px;
+  }
+}
+
+@keyframes openLeft {
+  from {
+    width: calc(50% + 5px);
+  }
+
+  to {
+    width: 20px;
+  }
+}
+
+.door-wrapper>.open,
+.door-wrapper>.open:active,
+.door-wrapper>.open:focus {
+  outline: 0;
+  position: absolute;
+  right: -55px;
+  top: 280px;
+  width: 30px;
+  height: 30px;
+  background-color: #b2b2b2;
+  border: 5px solid #A9A9A9;
+  margin-left: -2px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0,0,0,.4);
+  -moz-box-shadow: 0 2px 3px 1px rgba(0,0,0,.4);
+  box-shadow: 0 2px 3px 1px rgba(0,0,0,.4);
+}
+
+.door-wrapper>.open:hover {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.4);
+  -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.4);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.4);
+}
+
+.floor.--ground .guard {
+  height: 250px;
+  position: absolute;
+  right: 60px;
+  bottom: -15px;
+  cursor: pointer;
+}
+
+.floor.--first .time {
+  height: 100px;
+  position: absolute;
+  right: 280px;
+  top: 90px;
+  cursor: pointer;
+}
+
+.floor.--fourth .vase-wrapper {
+  width: 200px;
+  position: absolute;
+  right: 350px;
+  bottom: -25px;
+  cursor: pointer;
+}
+
+.floor.--fourth .vase-wrapper>.vase {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.floor.--fourth .vase-wrapper>.cat {
+  position: absolute;
+  width: 90px;
+  left: 55px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.floor.--fourth .vase-wrapper>.vase:hover+.cat {
+  bottom: 100px;
+  animation: showCat .5s;
+}
+
+@keyframes showCat {
+  from {
+    bottom: 20px;
+  }
+
+  to {
+    bottom: 100px;
+  }
 }

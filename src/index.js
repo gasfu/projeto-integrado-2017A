@@ -1,4 +1,4 @@
-import smoothScroll from "smoothScroll";
+import smoothScroll from "smoothscroll";
 import ElevatorController from "./controllers/ElevatorController";
 
 window.localStorage.setItem("floor", 4);

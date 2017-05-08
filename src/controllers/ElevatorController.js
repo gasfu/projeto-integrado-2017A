@@ -1,4 +1,4 @@
-import smoothScroll from "smoothScroll";
+import smoothScroll from "smoothscroll";
 
 export default class ElevatorController {
 	

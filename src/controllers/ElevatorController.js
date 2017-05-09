@@ -21,9 +21,11 @@ export default class ElevatorController {
 			setTimeout(() =>{
 				const nextDoor = document.querySelector(`#${section} .open`);
 				this.openDoor(nextDoor, false);
-			}, 1500)
+			}, 1500);
 		};
 
+		this.elevatorAudio.currentTime = 0;
+		this.elevatorAudio.play();
 		this.closeDoor(() => {
 			smoothScroll(floor, time, openNextDoor);
 		});
@@ -47,8 +49,6 @@ export default class ElevatorController {
 	}
 
 	closeDoor(callback = null) {
-		this.elevatorAudio.currentTime = 0;
-		this.elevatorAudio.play();
 
 		const door = document.querySelector(".door.--open");
 		door.classList.remove("--open");

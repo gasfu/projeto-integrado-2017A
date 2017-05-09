@@ -6,4 +6,8 @@ export default class AnimationController {
 	cat() {
 		this.catAudio.play();
 	}
+
+	cloud(sky) {
+		sky.classList.toggle("--cloudy");
+	}
 }

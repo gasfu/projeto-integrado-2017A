@@ -35,3 +35,8 @@ const cat = document.querySelector("[cat-action]");
 cat.addEventListener("mouseover", () => {
 	animationController.cat();
 });
+
+const sky = document.querySelector(".floor.--fifth");
+sky.addEventListener("click", () => {
+	animationController.cloud(sky);
+});

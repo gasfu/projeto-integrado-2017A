@@ -141,7 +141,7 @@ body {
 }
 
 .floor.--fifth {
-  background-color: #FF7257;
+  background-color: #A9D2E6;
 }
 
 .control-wrapper {
@@ -403,5 +403,55 @@ body {
 
   to {
     bottom: 100px;
+  }
+}
+
+.floor.--fifth .sun {
+  width: 100%;
+  opacity: .7;
+  transition-duration: 2s;
+}
+
+.floor.--fifth .cloud {
+  position: absolute;
+  width: 75%;
+  max-width: 1200px;
+  bottom: -30px;
+  transition-duration: 2s;
+  opacity: .8;
+}
+
+.floor.--fifth .cloud.--normal {
+  left: -75%;
+}
+
+.floor.--fifth .cloud.--tilted {
+  right: -75%;
+}
+
+.floor.--fifth.--cloudy {
+  background-color: #68808C;
+  transition-duration: 2s;
+}
+
+.floor.--fifth.--cloudy .sun {
+  opacity: .2;
+}
+
+.floor.--fifth.--cloudy .cloud.--normal {
+  left: -140px;
+}
+
+.floor.--fifth.--cloudy .cloud.--tilted {
+  right: -140px;
+}
+
+@keyframes enterCloudLeft {
+  from {
+    left: -75%;
+  }
+
+  to {
+    left: -140px;
   }
 }

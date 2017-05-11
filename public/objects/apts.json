@@ -1,0 +1,34 @@
+{
+	"data": [
+		{
+			"code": "C00",
+			"name": "ap01",
+			"password": "1235",
+			"src": "/assets/images/house-icon.svg"
+		},
+		{
+			"code": "C01",
+			"name": "ap02",
+			"password": "1234",
+			"src": "/assets/images/house-icon.svg"
+		},
+		{
+			"code": "C02",
+			"name": "ap03",
+			"password": "1234",
+			"src": "/assets/images/house-icon.svg"
+		},
+		{
+			"code": "C03",
+			"name": "ap05",
+			"password": "1234",
+			"src": "/assets/images/house-icon.svg"
+		},
+		{
+			"code": "C04",
+			"name": "ap05",
+			"password": "1234",
+			"src": "/assets/images/house-icon.svg"
+		}
+	]
+}

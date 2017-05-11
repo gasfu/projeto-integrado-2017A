@@ -45,7 +45,7 @@ body {
 	left: 0px;
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .control-wrapper.--hide {
@@ -373,41 +373,119 @@ body {
 	-webkit-flex-direction: column;
 }
 
-.floor.--third .machine-image {
-	position: absolute;
-	height: 300px;
-	bottom: 0px;
-	right: 120px;
-	cursor: pointer;
-}
-
-.machine-wrapper > .machine {
-	text-align: center;
-	border-bottom: solid 2px;
-}
-
-.machine-wrapper >  .machine > .item {
-	display: inline-block;
-	width: 100px;
-	margin-bottom: 15px;
-	text-align: center; 
-}
-
-.machine-wrapper >  .machine > .item .image {
-	width: 70px;
-	padding: 15px;
-	cursor: pointer;
-}
-
-.machine-wrapper >  .machine > .item  .radio {
+.machine-wrapper.--hide{
 	display: none;
 }
 
-.machine-wrapper >  .machine > .item .radio:checked + label > .image {
-	opacity: 0.2;
+.floor.--third .machine-image {
+	position: absolute;
+	height: 350px;
+	bottom: 0px;
+	right: 180px;
+	cursor: pointer;
+}
+
+.floor.--third .vase {
+	position: absolute;
+	height: 140px;
+	bottom: 0px;
+	right: 50px;
+}
+
+.floor.--third .trash {
+	position: absolute;
+	bottom: -5px;
+	height: 100px;
+	right: 450px;
+}
+
+.machine-wrapper .machine {
+	text-align: center;
+	border: solid 1px rgba(255, 255, 255, 0.3);
+	width: 750px;
+	padding: 10px;	
 }
 
 
+.machine-wrapper .machine > .item {
+	display: inline-block;
+	margin-bottom: 15px;
+	text-align: center;
+	width: calc(20% - 4px); 
+	font-family: Arial
+}
 
+.machine-wrapper .machine > .item .image {
+	width: 70px;
+	padding: 10px;
+	cursor: pointer;
+}
 
+.machine-wrapper .machine > .item  .radio {
+	display: none;
+}
 
+.machine-wrapper .machine > .item > .description {
+	color: #FFF;
+	line-height: 1.3em;
+}
+
+.machine-wrapper .machine > .item > .description > .name {
+	text-transform: uppercase;
+}
+
+.machine-wrapper .machine > .item > .description > .prace {
+	font-size: 14px;
+}
+.machine-wrapper .machine > .item .radio:checked + label > .image {
+	opacity: 0.1;
+}
+
+.machine-wrapper > .form {
+	text-align: center;
+}
+
+.machine-wrapper .confirm {
+	text-align: center;
+	height: 60px;
+	margin-top: 30px;
+	color: #FFF;
+	width: 130px;
+	display: inline-block;
+	background-color: transparent;
+	padding: 10px 10px 10px 0px;
+	border: solid 1px;
+	border-color: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+	transition-duration: 0.2s;
+	border-radius: 5px;
+	outline: none;
+}
+
+.machine-wrapper .confirm:hover {
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.machine-wrapper .confirm > .icon {
+	height: 100%;
+	vertical-align: middle;
+}
+
+.machine-wrapper .password {
+	margin-top: 30px;
+	border-radius: 5px;
+	padding: 6px 9px;
+	border: solid 1px rgba(255, 255, 255, 0.3);
+	background-color: transparent;
+	color:  #FFF;
+	height: 60px;
+	display: inline-block;
+}
+
+.machine-wrapper.--login .machine {
+	border: none;
+}
+
+.machine-wrapper.--login .confirm {
+	padding: 10px;
+}

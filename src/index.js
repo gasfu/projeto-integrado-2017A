@@ -1,12 +1,16 @@
 import smoothScroll from "smoothscroll";
 import ElevatorController from "./controllers/ElevatorController";
 import AnimationController from "./controllers/AnimationController";
+import MachineController from "./controllers/MachineController";
+import AptController from "./controllers/AptController";
 
 window.localStorage.setItem("floor", 4);
 const floorsName = ["ground", "first", "second", "third", "fourth", "fifth"];
 
 const elevatorController = new ElevatorController();
 const animationController = new AnimationController();
+const machineController = new MachineController();
+const aptController = new AptController();
 
 //Add action in control
 const controlButtons = document.querySelectorAll("[control-action-move]");
@@ -44,4 +48,30 @@ cat.addEventListener("mouseover", () => {
 const sky = document.querySelector(".floor.--fifth");
 sky.addEventListener("click", () => {
 	animationController.cloud(sky);
+});
+
+(async function renderProducts() {
+	const machine = document.querySelector("[data-machine]");
+	const products = await machineController.getProducts();
+	let html = products.data.map(machineController.prepareItemHtml).join("");
+	machine.innerHTML = html;
+})();
+
+(async function renderApts() {
+	const machine = document.querySelector("[data-apts]");
+	const apts = await aptController.getApts();
+	let html = apts.data.map(aptController.prepareItemHtml).join("");
+	machine.innerHTML = html;
+})();
+
+const machine = document.querySelector("[open-machine]");
+machine.addEventListener("click", aptController.open);
+
+const formAuthenticate = document.querySelector("[authenticate-submit]");
+formAuthenticate.addEventListener("submit", e => {
+e.preventDefault();
+	const auth = aptController.authenticate(e);
+	auth.then(data => {
+		data ? machineController.open() : null;
+	});
 });

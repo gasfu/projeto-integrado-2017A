@@ -1,0 +1,94 @@
+{
+	"data": [
+		{
+			"code": "A00",
+			"name": "Toddy",
+			"prace": "00,00",
+			"src": "/assets/images/toddy.svg"
+		},
+		{
+			"code": "A01",
+			"name": "Suco maça",
+			"prace": "00,00",
+			"src": "/assets/images/drink2.svg"
+		},
+		{
+			"code": "A02",
+			"name": "Suco laranja",
+			"prace": "00,00",
+			"src": "/assets/images/drink3.svg"
+		},
+		{
+			"code": "A03",
+			"name": "Refri",
+			"prace": "00,00",
+			"src": "/assets/images/drink.svg"
+		},
+		{
+			"code": "A04",
+			"name": "Côco",
+			"prace": "00,00",
+			"src": "/assets/images/coconut.svg"
+		},
+		{
+			"code": "A05",
+			"name": "Laranja",
+			"prace": "00,00",
+			"src": "/assets/images/orange.svg"
+		},
+		{
+			"code": "A06",
+			"name": "Morango",
+			"prace": "00,00",
+			"src": "/assets/images/strawberry.svg"
+		},
+		{
+			"code": "A07",
+			"name": "Melancia",
+			"prace": "00,00",
+			"src": "/assets/images/watermelon.svg"
+		},
+		{
+			"code": "A08",
+			"name": "Chocolate",
+			"prace": "00,00",
+			"src": "/assets/images/chocolates.svg"
+		},
+		{
+			"code": "A09",
+			"name": "Rosquinha",
+			"prace": "00,00",
+			"src": "/assets/images/donut.svg"
+		},
+		{
+			"code": "A10",
+			"name": "x-salada",
+			"prace": "00,00",
+			"src": "/assets/images/burguer.svg"
+		},
+		{
+			"code": "A11",
+			"name": "Sanduiche",
+			"prace": "00,00",
+			"src": "/assets/images/panini.svg"
+		},
+		{
+			"code": "A12",
+			"name": "Batata",
+			"prace": "00,00",
+			"src": "/assets/images/fries.svg"
+		},
+		{
+			"code": "A13",
+			"name": "Bacon",
+			"prace": "00,00",
+			"src": "/assets/images/bacon.svg"
+		},
+		{
+			"code": "A014",
+			"name": "Bobom",
+			"prace": "00,00",
+			"src": "/assets/images/candy2.svg"
+		}
+	]
+}

@@ -12,7 +12,7 @@ export default class ElevatorController {
 
 	move(section, value) {
 		this.control.classList.add("--hide");
-		const time = Math.abs(window.localStorage.getItem("floor") - value) * 2000;
+		const time = Math.abs(window.localStorage.getItem("floor") - value) * 3000;
 		const floor = document.querySelector(`#${section}`);
 		
 		const openNextDoor = () => {

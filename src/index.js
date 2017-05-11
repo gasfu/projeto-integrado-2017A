@@ -16,6 +16,11 @@ controlButtons.forEach(button => {
 	});
 });
 
+const controlHelperButton = document.querySelector("[control-action-helper]");
+controlHelperButton.addEventListener("click", () => {
+	window.open("https://github.com/gasfu/projeto-integrado-2017A");
+});
+
 const openDoorButtons = document.querySelectorAll("[open-action]");
 openDoorButtons.forEach(button => {
 	button.addEventListener("click", (e) => {

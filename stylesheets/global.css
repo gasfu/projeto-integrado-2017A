@@ -37,7 +37,8 @@ body {
 	background-color: #A9D2E6;
 }
 
-.control-wrapper {
+.control-wrapper,
+.machine-wrapper {
 	position: fixed;
 	z-index: 9;
 	top: 0px;
@@ -360,3 +361,53 @@ body {
 		left: -140px;
 	}
 }
+
+/* Third Floor */
+.machine-wrapper {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+.floor.--third .machine-image {
+	position: absolute;
+	height: 300px;
+	bottom: 0px;
+	right: 120px;
+	cursor: pointer;
+}
+
+.machine-wrapper > .machine {
+	text-align: center;
+	border-bottom: solid 2px;
+}
+
+.machine-wrapper >  .machine > .item {
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 15px;
+	text-align: center; 
+}
+
+.machine-wrapper >  .machine > .item .image {
+	width: 70px;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.machine-wrapper >  .machine > .item  .radio {
+	display: none;
+}
+
+.machine-wrapper >  .machine > .item .radio:checked + label > .image {
+	opacity: 0.2;
+}
+
+
+
+
+

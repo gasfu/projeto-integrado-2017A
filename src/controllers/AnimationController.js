@@ -14,5 +14,16 @@ export default class AnimationController {
 		this.rain ? this.trovaoAudio.pause() : this.trovaoAudio.play();
 		this.rain ? this.birdAudio.play() : this.birdAudio.pause();
 		sky.classList.toggle("--cloudy");
+		this.rain = !this.rain;
+		
+		const pause = () => {
+			this.trovaoAudio.pause();
+			this.birdAudio.pause();
+		};
+
+		setTimeout(function() {
+			pause();
+		}, 8000);
+
 	}
 }

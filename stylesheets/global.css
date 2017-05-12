@@ -403,7 +403,8 @@ body {
 	text-align: center;
 	border: solid 1px rgba(255, 255, 255, 0.3);
 	width: 750px;
-	padding: 10px;	
+	padding: 10px;
+	border-radius: 5px;
 }
 
 
@@ -486,6 +487,26 @@ body {
 	border: none;
 }
 
-.machine-wrapper.--login .confirm {
-	padding: 10px;
+.machine-wrapper .confirm,
+.machine-wrapper .confirm:focus,
+.machine-wrapper .confirm:active {
+	outline: none;
+	box-shadow: none;
+}
+
+.machine-wrapper.--feedback .machine {
+	background-color: #FFFFFF;
+	color: #666;
+	font-family: Arial;
+}
+
+.machine-wrapper.--feedback .machine > .wink {
+	width: 200px;
+	padding: 40px 0px;
+}
+
+.machine-wrapper.--feedback .machine > .text {
+	padding: 40px 0px;
+	text-transform: uppercase;
+	font-size: 22px;
 }

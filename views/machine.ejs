@@ -1,5 +1,5 @@
-<section class="machine-wrapper --hide">
-	<form class="form">
+<section class="machine-wrapper --buyed --hide">
+	<form class="form" buy-submit>
 		<ul data-machine class="machine"></ul>
 		<button class="confirm"><img class="icon" src="/assets/images/buy.svg">Comprar</button>
 	</form>
@@ -11,5 +11,16 @@
 		<ul data-apts class="machine"></ul>
 		<input class="password" type="password" name="password" placeholder="informe sua senha" maxlength="4" />	
 		<button type="submit" class="confirm">Entrar<img class="icon" src="/assets/images/arrow_right.svg"></button>
+	</form>
+</section>
+
+<!-- FEEDBACK -->
+<section class="machine-wrapper --feedback --hide">
+	<form class="form" close-submit >
+		<ul data-apts class="machine">
+			<img class="wink" src="/assets/icons/wink.svg">
+			<p class="text" >BOA! ITEM COMPRADO :)</p>
+		</ul>
+		<button type="submit" class="confirm">Fechar</button>
 	</form>
 </section>

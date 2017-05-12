@@ -3,7 +3,6 @@ import axios from "axios";
 export default class MachineController {
 	
 	constructor() {
-		console.log(this.machine);
 	}
 
 	async getProducts() {

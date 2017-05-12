@@ -3,31 +3,31 @@
 		{
 			"code": "C00",
 			"name": "ap01",
-			"password": "1235",
+			"password": "0001",
 			"src": "/assets/images/house-icon.svg"
 		},
 		{
 			"code": "C01",
 			"name": "ap02",
-			"password": "1234",
+			"password": "0002",
 			"src": "/assets/images/house-icon.svg"
 		},
 		{
 			"code": "C02",
 			"name": "ap03",
-			"password": "1234",
+			"password": "0003",
 			"src": "/assets/images/house-icon.svg"
 		},
 		{
 			"code": "C03",
-			"name": "ap05",
-			"password": "1234",
+			"name": "ap04",
+			"password": "0004",
 			"src": "/assets/images/house-icon.svg"
 		},
 		{
 			"code": "C04",
 			"name": "ap05",
-			"password": "1234",
+			"password": "0005",
 			"src": "/assets/images/house-icon.svg"
 		}
 	]

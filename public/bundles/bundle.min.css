@@ -103,7 +103,7 @@ table {
 
 @font-face {
   font-family: Digital;
-  src: url("/assets/fonts/digital.ttf");
+  src: url("../../../../../assets/fonts/digital.ttf");
 }
 
 body {
@@ -496,6 +496,7 @@ body {
   border: 1px solid rgba(255,255,255,.3);
   width: 750px;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .machine-wrapper .machine>.item {
@@ -578,6 +579,26 @@ body {
   border: none;
 }
 
-.machine-wrapper.--login .confirm {
-  padding: 10px;
+.machine-wrapper .confirm,
+.machine-wrapper .confirm:active,
+.machine-wrapper .confirm:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.machine-wrapper.--feedback .machine {
+  background-color: #FFF;
+  color: #666;
+  font-family: Arial;
+}
+
+.machine-wrapper.--feedback .machine>.wink {
+  width: 200px;
+  padding: 40px 0;
+}
+
+.machine-wrapper.--feedback .machine>.text {
+  padding: 40px 0;
+  text-transform: uppercase;
+  font-size: 22px;
 }

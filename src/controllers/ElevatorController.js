@@ -57,7 +57,7 @@ export default class ElevatorController {
 	}
 
 	_setGround() {
-		const section = document.querySelector("#third");
+		const section = document.querySelector("#ground");
 		window.localStorage.setItem("floor", 0);
 		smoothScroll(section, 0);
 	}

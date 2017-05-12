@@ -69,9 +69,21 @@ machine.addEventListener("click", aptController.open);
 
 const formAuthenticate = document.querySelector("[authenticate-submit]");
 formAuthenticate.addEventListener("submit", e => {
-e.preventDefault();
+	e.preventDefault();
 	const auth = aptController.authenticate(e);
 	auth.then(data => {
 		data ? machineController.open() : null;
 	});
+});
+
+const buyed = document.querySelector("[buy-submit]");
+buyed.addEventListener("submit", e => {
+	e.preventDefault();
+	const buy = aptController.buy(e);
+});
+
+const closed = document.querySelector("[close-submit]");
+closed.addEventListener("submit", e => {
+	e.preventDefault();
+	aptController.close(e);
 });

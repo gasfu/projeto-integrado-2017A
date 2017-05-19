@@ -49,7 +49,6 @@ export default class ElevatorController {
 	}
 
 	closeDoor(callback = null) {
-
 		const door = document.querySelector(".door.--open");
 		door.classList.remove("--open");
 		door.classList.add("--close");
@@ -57,7 +56,7 @@ export default class ElevatorController {
 	}
 
 	_setGround() {
-		const section = document.querySelector("#ground");
+		const section = document.querySelector("#third");
 		window.localStorage.setItem("floor", 0);
 		smoothScroll(section, 0);
 	}

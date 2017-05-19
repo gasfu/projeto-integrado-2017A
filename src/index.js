@@ -50,6 +50,7 @@ sky.addEventListener("click", () => {
 	animationController.cloud(sky);
 });
 
+
 (async function renderProducts() {
 	const machine = document.querySelector("[data-machine]");
 	const products = await machineController.getProducts();
@@ -68,11 +69,17 @@ const machine = document.querySelector("[open-machine]");
 machine.addEventListener("click", aptController.open);
 
 const formAuthenticate = document.querySelector("[authenticate-submit]");
-formAuthenticate.addEventListener("submit", e => {
+const inputPassword = document.querySelector("[input-passoword]");
+
+inputPassword.addEventListener("keydown", e => {
+	formAuthenticate.item.forEach(row => row.addEventListener("change", aptController.cleanAfd));
 	e.preventDefault();
-	const auth = aptController.authenticate(e);
-	auth.then(data => {
-		data ? machineController.open() : null;
+	if(inputPassword.value.length == 0) aptController.openAfd();
+	const auth = aptController.authenticate(e, formAuthenticate);
+	auth.then(response => {
+		inputPassword.value = response.password;
+		response.validated && response.length == 4 ? machineController.open() : null; 
+		response.validated ? aptController.renderSuccess(response.length) :  aptController.renderError(response.length); 
 	});
 });
 

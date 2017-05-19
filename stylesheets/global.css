@@ -5,6 +5,7 @@
 
 body {
 	overflow: hidden;
+	font-family: 'Lato', sans-serif;
 }
 
 .floor {
@@ -485,6 +486,70 @@ body {
 
 .machine-wrapper.--login .machine {
 	border: none;
+}
+
+.machine-wrapper.--login > .afd {
+	position: absolute;
+	top: -70px;
+	list-style: none;
+	font-family: Lato;
+	text-transform: uppercase;
+	transition-duration: .5s;
+}
+
+.machine-wrapper.--login > .afd.--open {
+	top: 60px;
+}
+
+.machine-wrapper.--login > .afd > .item {
+	display: inline-block;
+	border: solid 2px white;
+	width: 60px;
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+	font-size: lato;
+	border-radius:  50%;
+	color: white;
+	position: relative;
+	transition-duration: 1s;
+}
+
+
+.machine-wrapper.--login > .afd > .item::before {
+	content: "";
+	background-color: white;
+	width: 105px;
+	height: 2px;
+	position: absolute;
+	right: 58px;
+	top: 31px;
+}
+
+.machine-wrapper.--login > .afd > .item:first-child::before {
+	content: none;
+}
+
+.machine-wrapper.--login > .afd > .item:last-child {
+	background-color: white;
+	color: #555;
+}
+
+.machine-wrapper.--login > .afd > .item.--success,
+.machine-wrapper.--login > .afd > .item.--success + .item::before {
+	background-color: #4CB266;
+	border-color: #4CB266; 
+	color:  white;
+}
+
+.machine-wrapper.--login > .afd > .item.--error {
+	border-color: #B2373D; 
+	background-color: #B2373D;
+	color:  white;
+}
+
+.machine-wrapper.--login > .afd > .item + .item {
+	margin-left: 100px;
 }
 
 .machine-wrapper .confirm,

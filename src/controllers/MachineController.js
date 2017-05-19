@@ -23,10 +23,10 @@ export default class MachineController {
 		let html = "";
 		html += "<li class='item'>";
 		html += "<input type='radio' class='radio' name='item' id='" + item.code + "'>";
-		html += "<label for='" + item.code + "'><img class='image' src='" + item.src + "' ></label>";
+		html += "<label apts-item for='" + item.code + "'><img class='image' src='" + item.src + "' ></label>";
 		html += "<span class='description'>";
 		html += "<p class='name'>" + item.name + "</p>";
-		html += "<p class='prace'>R$ " + item.prace + "</p>";
+		html += "<p class='prace'>R$ " + item.prace.toFixed(2).replace(".", ",") + "</p>";
 		html +=	"</span>";
 		html += "</li>";
 
@@ -34,10 +34,11 @@ export default class MachineController {
 	}
 
 	open() {
-		const machine = document.querySelector(".machine-wrapper");
-		const auth = document.querySelector(".machine-wrapper.--login");
-		auth.classList.add("--hide");
-		machine.classList.remove("--hide");
-
+		setTimeout(() => {
+			const machine = document.querySelector(".machine-wrapper");
+			const auth = document.querySelector(".machine-wrapper.--login");
+			auth.classList.add("--hide");
+			machine.classList.remove("--hide");
+		}, 1000);
 	}
 }
